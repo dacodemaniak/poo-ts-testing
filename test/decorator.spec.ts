@@ -11,14 +11,14 @@ describe(`Price decorators`, () => {
         .setRoomPrice(45);
 
     const single: SingleDecorator = new SingleDecorator(room);
-    const withBrakfeast: SingleBrakefeastDecorator = new SingleBrakefeastDecorator(single);
+    const withBrakefeast: SingleBrakefeastDecorator = new SingleBrakefeastDecorator(single);
 
     test(`Single room price must be 45`, () => {
         expect(single.total()).toBe(45);
     });
 
     test(`Single room and brakefeast must be 56`, () => {
-        expect(withBrakfeast.total()).toBe(56);
+        expect(withBrakefeast.total()).toBe(56);
     });
 
 })

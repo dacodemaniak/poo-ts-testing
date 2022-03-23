@@ -1,4 +1,5 @@
 import { RoomModel } from './../src/models/room.model';
+import { IPrice } from './../src/interfaces/i.price';
 
 describe('Testing room.model.ts', () => {
     const room: RoomModel = new RoomModel();
@@ -26,4 +27,9 @@ describe('Testing room.model.ts', () => {
         room.setRoomPrice(45);
         expect(room.getRoomPrice()).toBe(45);
     });
+
+    test(`Room total is 45 using 'total' method implementation`, () => {
+        room.setRoomPrice(45);
+        expect(room.total()).toBe(45);
+    })
 });

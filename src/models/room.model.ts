@@ -1,4 +1,7 @@
-export class RoomModel {
+import { IPrice } from "../interfaces/i.price";
+
+export class RoomModel implements IPrice {
+
     private roomNumber: number;
     private roomPrice: number;
 
@@ -19,6 +22,10 @@ export class RoomModel {
     }
 
     public getRoomPrice(): number {
+        return this.roomPrice;
+    }
+
+    public total(): number {
         return this.roomPrice;
     }
 }

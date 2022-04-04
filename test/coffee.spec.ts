@@ -17,14 +17,14 @@ describe('Coffee', () => {
          * $ethiopie->coffeeType = 'Arabica';
          * $ethiopie->origin = 'Ethiopy';
          */
-        const ethiopie: Coffee = new Coffee();
+        const ethiopie = new Coffee();
         ethiopie.setCoffeeType('ARABICA');
         ethiopie.origin = 'Ethiopy';
 
         expect(ethiopie.getCoffeeType()).toBe('Arabica');
         expect(ethiopie.origin).toBe('Ethiopy');
 
-        const colombie: Coffee = new Coffee();
+        const colombie = new Coffee();
         colombie.setCoffeeType('RoBuSTA');
         colombie.origin = 'Colombie';
 

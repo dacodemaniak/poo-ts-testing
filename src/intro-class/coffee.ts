@@ -9,6 +9,8 @@ export class Coffee {
 
     public origin: string;
 
+    private perKgPrice: number;
+
     // Methods (fonctions de classe)
 
     // Getter and Setter
@@ -24,5 +26,19 @@ export class Coffee {
 
     public getCoffeeType(): string {
         return this.coffeeType;
+    }
+
+    public setPerKgPrice(price: number): void {
+        if (price > 0) {
+            this.perKgPrice = price;
+        }
+    }
+
+    public getPerKgPrice(): number {
+        return this.perKgPrice;
+    }
+
+    public getCost(quantity: number): number {
+        return this.perKgPrice / 1000 * quantity;
     }
 }

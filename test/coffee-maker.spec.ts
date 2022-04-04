@@ -35,7 +35,7 @@ describe('Coffee maker', () => {
         coffeeMaker.setEnergy(electricite);
         coffeeMaker.setCoffee(colombiaRobusta);
 
-        expect(coffeeMaker.buyMeACoffee()).toBe(0.0796);
+        expect(coffeeMaker.buyMeACoffee()).toBe(0.0806);
     });
 
 })

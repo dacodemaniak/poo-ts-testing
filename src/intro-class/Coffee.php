@@ -5,7 +5,7 @@ class Coffee {
 
     public function setCoffeType(string coffeeType): void {
         if (strtolower($coffeeType) === 'arabica' || strtolower($coffeeType) === 'robusta') {
-            $this->coffeeType = ucfirst($coffeeType);
+            $this->coffeeType = ucfirst(strtolower($coffeeType));
         }
     }
 

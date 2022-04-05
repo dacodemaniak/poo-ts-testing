@@ -6,7 +6,7 @@ describe('Coffee', () => {
     test('Coffee class instanciation', () => {
         let ethiopie: Coffee;
 
-        ethiopie = new Coffee();
+        ethiopie = new Coffee('Arabica', 'Ethiopie');
 
         expect(ethiopie).toBeInstanceOf(Coffee);
     });
@@ -17,16 +17,13 @@ describe('Coffee', () => {
          * $ethiopie->coffeeType = 'Arabica';
          * $ethiopie->origin = 'Ethiopy';
          */
-        const ethiopie = new Coffee();
-        ethiopie.setCoffeeType('ARABICA');
-        ethiopie.origin = 'Ethiopy';
+        const ethiopie = new Coffee('Arabica', 'Ethiopie');
+ 
 
         expect(ethiopie.getCoffeeType()).toBe('Arabica');
-        expect(ethiopie.origin).toBe('Ethiopy');
+        expect(ethiopie.origin).toBe('Ethiopie');
 
-        const colombie = new Coffee();
-        colombie.setCoffeeType('RoBuSTA');
-        colombie.origin = 'Colombie';
+        const colombie = new Coffee('RoBuSTA', 'Colombie');
 
         expect(colombie.getCoffeeType()).toBe('Robusta');
         expect(colombie.origin).toBe('Colombie');

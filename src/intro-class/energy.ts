@@ -6,6 +6,10 @@
 export abstract class Energy {
     protected perHourCost: number;
 
+    public constructor(perHourCost: number) {
+        this.perHourCost = perHourCost;
+    }
+    
     public setPerHourCost(amount: number): void {
         if (amount > 0) {
             this.perHourCost = amount;

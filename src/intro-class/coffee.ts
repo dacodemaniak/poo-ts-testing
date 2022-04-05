@@ -11,6 +11,13 @@ export class Coffee {
 
     private perKgPrice: number;
 
+    public constructor(coffeeType: string, origin: string) {
+        this.coffeeType = coffeeType;
+        this.origin = origin;
+
+        this.perKgPrice = 0;
+    }
+
     // Methods (fonctions de classe)
 
     // Getter and Setter
@@ -26,6 +33,10 @@ export class Coffee {
 
     public getCoffeeType(): string {
         return this.coffeeType;
+    }
+
+    public setOrigin(origin: string): void {
+        this.origin = origin;
     }
 
     public setPerKgPrice(price: number): void {

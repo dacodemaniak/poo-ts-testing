@@ -1,4 +1,5 @@
 import { Coffee } from './../src/intro-class/coffee';
+import { CoffeeFactory } from './../src/intro-class/coffee-factory';
 
 describe('Coffee', () => {
 
@@ -27,5 +28,12 @@ describe('Coffee', () => {
 
         expect(colombie.getCoffeeType()).toBe('Robusta');
         expect(colombie.origin).toBe('Colombie');
-    })
+    });
+
+    test('Coffee must be printable', () => {
+        const coffee = CoffeeFactory.getCoffee('Arabica', 'Colombie', 15);
+        console.log(coffee.toString());
+
+        expect(true).toBe(true);
+    });
 })

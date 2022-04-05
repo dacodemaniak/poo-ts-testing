@@ -1,4 +1,6 @@
-export class Coffee {
+import { Printable } from "./printable";
+
+export class Coffee implements Printable {
     // Properties (propriétés ou attributs d'une classe)
 
     /**
@@ -51,5 +53,13 @@ export class Coffee {
 
     public getCost(quantity: number): number {
         return this.perKgPrice / 1000 * quantity;
+    }
+
+    public toString(): string {
+        return `
+            Type: ${this.coffeeType},
+            Origine: ${this.origin},
+            Prix: ${this.perKgPrice}
+        `;
     }
 }
